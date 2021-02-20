@@ -5,20 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sungwopa </var/mail/sungwopa>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/20 12:20:48 by sungwopa          #+#    #+#             */
-/*   Updated: 2021/02/20 13:53:47 by sungwopa         ###   ########.fr       */
+/*   Created: 2021/02/20 14:18:08 by sungwopa          #+#    #+#             */
+/*   Updated: 2021/02/20 14:19:08 by sungwopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c);
+void		ft_putchar(char c);
 
-void	print_row(char *str_set, int row)
+void		print_row(char *str_set, int row)
 {
-	int i;
-	i = 1;
+	int	i;
 
+	i = 1;
 	while (i <= row)
 	{
 		if (i == 1)
@@ -32,20 +32,18 @@ void	print_row(char *str_set, int row)
 	write(1, "\n", 1);
 }
 
-void	rush(int row, int col)
+void		rush(int row, int col)
 {
-	char *start_end = "o-o";
-	char *mid = "| |";
+	char	*start_end;
+	char	*mid;
+	int		j;
 
+	start_end = "o-o";
+	mid = "| |";
 	if (row == 0 || col == 0)
-	{
 		return ;
-	}
-
-	int j;
 	j = 1;
-
-	while(j <= col)
+	while (j <= col)
 	{
 		if (j == 1)
 			print_row(start_end, row);
@@ -56,5 +54,3 @@ void	rush(int row, int col)
 		j++;
 	}
 }
-
-
