@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sungwopa </var/mail/sungwopa>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/20 14:18:08 by sungwopa          #+#    #+#             */
-/*   Updated: 2021/02/20 14:19:08 by sungwopa         ###   ########.fr       */
+/*   Created: 2021/02/20 14:52:09 by sungwopa          #+#    #+#             */
+/*   Updated: 2021/02/20 21:12:33 by sungwopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,23 +34,25 @@ void		print_row(char *str_set, int row)
 
 void		rush(int row, int col)
 {
-	char	*start_end;
+	char	*start;
 	char	*mid;
+	char	*end;
 	int		j;
 
-	start_end = "o-o";
+	start = "o-o";
 	mid = "| |";
+	end = "o-o";
 	if (row == 0 || col == 0)
 		return ;
 	j = 1;
 	while (j <= col)
 	{
 		if (j == 1)
-			print_row(start_end, row);
+			print_row(start, row);
 		else if (j < col)
 			print_row(mid, row);
 		else if (j == col)
-			print_row(start_end, row);
+			print_row(end, row);
 		j++;
 	}
 }

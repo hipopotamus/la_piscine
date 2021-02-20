@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sungwopa </var/mail/sungwopa>              +#+  +:+       +#+        */
+/*   By: sungwopa <sungwopa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/20 13:49:31 by sungwopa          #+#    #+#             */
-/*   Updated: 2021/02/20 13:50:11 by sungwopa         ###   ########.fr       */
+/*   Created: 2021/02/20 20:47:30 by sungwopa          #+#    #+#             */
+/*   Updated: 2021/02/20 20:48:37 by sungwopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@ void rush(int row, int col);
 
 int main()
 {
-	rush(10,10);
+	rush(10,20);
 	return(0);
 }
