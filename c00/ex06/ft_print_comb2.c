@@ -6,7 +6,7 @@
 /*   By: sungwopa <sungwopa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/20 19:55:31 by sungwopa          #+#    #+#             */
-/*   Updated: 2021/02/20 20:45:52 by sungwopa         ###   ########.fr       */
+/*   Updated: 2021/02/20 21:36:20 by sungwopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void ft_print_comb2(void)
 
 	while(col < 9)
 	{
-		if (
+		
 		ft_print_range(9);
 		while(row < 9)
 		{
