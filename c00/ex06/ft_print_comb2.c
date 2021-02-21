@@ -12,45 +12,62 @@
 
 #include <unistd.h>
 
-void ft_print_range(int end_n)
+int power(int a, int b)
 {
-	char start;
-	char end;
+	int i;
+	int temp = a;
 
-	start = '0';
-	end = '0';
-	range_end = '0' + end_n;
-
-	while(start <= '9')
+	i = 1;
+	while(i < b)
 	{
-		while(end <= range_end)
-		{
-			write(1, &start, 1);
-			write(1, &end, 1);
-		}
-		start++;
-		end = '0';
+		a = a*temp;
+		i++;
 	}
+	return(a);
 }
 
-
-void ft_print_comb2(void)
+void convert(int n, int s)
 {
-	int col;
-	int row;
+	char buff[s];
+	int i;
+	int j;
 
-	col = 0;
-	row = 0;
-
-	while(col < 9)
+	j = power(10,s-1);
+	i = 0;
+	while (i <= s-1)
 	{
-		
-		ft_print_range(9);
-		while(row < 9)
-		{
-			ft_print_range(9)
-		}
+		if ((n / j) < 1)
+			buff[i] = '0';
+		else
+			buff[i] = '0' + (n / j);
+		n = n%j;
+		i++;
+		j = j/10;
 	}
+	write(1, buff, s);
+}
 
+void  ft_print_comb2()
+{
+	int i;
+	int j;
+	char *set;
 
+	i = 0;
+	set = " , ";
+
+	while(i <= 98)
+	{
+		j = i+1;
+		while (i < j && j <= 99)
+		{
+			convert(i,2);
+			write(1, &set[0], 1);
+			convert(j,2);
+			if (i < 98)
+				write(1, &set[1], 2);
+			j++;
+		}
+		i++;
+	}
 }
