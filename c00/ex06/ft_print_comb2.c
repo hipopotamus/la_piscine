@@ -6,68 +6,68 @@
 /*   By: sungwopa <sungwopa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/20 19:55:31 by sungwopa          #+#    #+#             */
-/*   Updated: 2021/02/20 21:36:20 by sungwopa         ###   ########.fr       */
+/*   Updated: 2021/02/23 15:30:50 by sungwopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int power(int a, int b)
+int		power(int a, int b)
 {
 	int i;
-	int temp = a;
+	int temp;
 
+	temp = a;
 	i = 1;
-	while(i < b)
+	while (i < b)
 	{
-		a = a*temp;
+		a = a * temp;
 		i++;
 	}
-	return(a);
+	return (a);
 }
 
-void convert(int n, int s)
+void	convert(int n, int size)
 {
-	char buff[s];
-	int i;
-	int j;
+	char	buff[size];
+	int		i;
+	int		j;
 
-	j = power(10,s-1);
+	j = power(10, size - 1);
 	i = 0;
-	while (i <= s-1)
+	while (i <= size - 1)
 	{
 		if ((n / j) < 1)
 			buff[i] = '0';
 		else
 			buff[i] = '0' + (n / j);
-		n = n%j;
+		n = n % j;
+		j = j / 10;
 		i++;
-		j = j/10;
 	}
-	write(1, buff, s);
+	write(1, buff, size);
 }
 
-void  ft_print_comb2()
+void	ft_print_comb2(void)
 {
-	int i;
-	int j;
-	char *set;
+	int		first;
+	int		sec;
+	char	*set;
 
-	i = 0;
-	set = " , ";
-
-	while(i <= 98)
+	first = 0;
+	set = " ,";
+	while (first <= 98)
 	{
-		j = i+1;
-		while (i < j && j <= 99)
+		sec = first + 1;
+		while (sec <= 99)
 		{
-			convert(i,2);
+			convert(first, 2);
 			write(1, &set[0], 1);
-			convert(j,2);
-			if (i < 98)
-				write(1, &set[1], 2);
-			j++;
+			convert(sec, 2);
+			if (first < 98)
+				write(1, set, 2);
+			sec++;
 		}
-		i++;
+		first++;
 	}
 }

@@ -6,21 +6,16 @@
 /*   By: sungwopa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/18 18:23:54 by sungwopa          #+#    #+#             */
-/*   Updated: 2021/02/18 18:53:19 by sungwopa         ###   ########.fr       */
+/*   Updated: 2021/02/23 12:57:41 by sungwopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void ft_putchar(char a);
 
-#include <stdio.h>
 #include <unistd.h>
 
 int main()
 {
-	char a;
-
-	read(0, &a, 1);
-
-	ft_putchar(a);
+	ft_putchar('b');
 }
 

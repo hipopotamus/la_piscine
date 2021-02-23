@@ -6,7 +6,7 @@
 /*   By: sungwopa <sungwopa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/20 19:30:15 by sungwopa          #+#    #+#             */
-/*   Updated: 2021/02/20 19:39:19 by sungwopa         ###   ########.fr       */
+/*   Updated: 2021/02/23 13:26:40 by sungwopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,16 @@ void	print_n(int num)
 	int		input_num;
 
 	input_num = num;
-	one = num % 10 + '0';
+	hund = num % 10 + '0';
 	num = num / 10;
 	ten = num % 10 + '0';
 	num = num / 10;
-	hund = num % 10 + '0';
-	if (hund < ten && ten < one)
+	one = num % 10 + '0';
+	if (one < ten && ten < hund)
 	{
-		write(1, &hund, 1);
-		write(1, &ten, 1);
 		write(1, &one, 1);
+		write(1, &ten, 1);
+		write(1, &hund, 1);
 		if (input_num != 789)
 		{
 			write(1, ", ", 2);

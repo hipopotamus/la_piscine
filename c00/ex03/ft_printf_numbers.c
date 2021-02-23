@@ -6,20 +6,20 @@
 /*   By: sungwopa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/18 19:20:25 by sungwopa          #+#    #+#             */
-/*   Updated: 2021/02/18 19:23:01 by sungwopa         ###   ########.fr       */
+/*   Updated: 2021/02/23 13:14:50 by sungwopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_print_numbers(void)
+void	ft_print_numbers(void)
 {
-	int a = 0;
+	int start;
 
-	while(a < 10)
+	start = '0';
+	while (start < '0' + 10)
 	{
-		write(1, &a, 1);
-		a++;
+		write(1, &start, 1);
+		start++;
 	}
 }
-

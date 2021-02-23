@@ -6,22 +6,20 @@
 /*   By: sungwopa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/18 19:11:40 by sungwopa          #+#    #+#             */
-/*   Updated: 2021/02/18 19:14:38 by sungwopa         ###   ########.fr       */
+/*   Updated: 2021/02/23 13:07:39 by sungwopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_print_alphabet(void)
+void	ft_print_alphabet(void)
 {
-	char c = 'a';
+	char alpha_a;
 
-	int i = 0;
-
-	while(i<26)
+	alpha_a = 'a';
+	while (c <= 'z')
 	{
 		write(1, &c, 1);
 		c++;
-		i++;
 	}
 }
