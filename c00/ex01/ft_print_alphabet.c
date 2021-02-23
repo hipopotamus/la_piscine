@@ -6,7 +6,7 @@
 /*   By: sungwopa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/18 19:11:40 by sungwopa          #+#    #+#             */
-/*   Updated: 2021/02/23 13:07:39 by sungwopa         ###   ########.fr       */
+/*   Updated: 2021/02/23 17:41:40 by sungwopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ void	ft_print_alphabet(void)
 	char alpha_a;
 
 	alpha_a = 'a';
-	while (c <= 'z')
+	while (alpha_a <= 'z')
 	{
-		write(1, &c, 1);
-		c++;
+		write(1, &alpha_a, 1);
+		alpha_a++;
 	}
 }

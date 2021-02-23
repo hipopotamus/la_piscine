@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_numbers.c                                :+:      :+:    :+:   */
+/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sungwopa <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sungwopa <sungwopa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/18 19:20:25 by sungwopa          #+#    #+#             */
-/*   Updated: 2021/02/23 13:14:50 by sungwopa         ###   ########.fr       */
+/*   Created: 2021/02/23 16:37:03 by sungwopa          #+#    #+#             */
+/*   Updated: 2021/02/23 19:12:45 by sungwopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_numbers(void)
+void	ft_ultimate_div_mod(int *a, int *b)
 {
-	int start;
+	int temp;
 
-	start = '0';
-	while (start < '0' + 10)
-	{
-		write(1, &start, 1);
-		start++;
-	}
+	temp = *a / *b;
+	*b = *a % *b;
+	*a = temp;
 }

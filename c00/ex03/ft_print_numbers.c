@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sungwopa <sungwopa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sungwopa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/23 16:46:07 by sungwopa          #+#    #+#             */
-/*   Updated: 2021/02/23 18:25:38 by sungwopa         ###   ########.fr       */
+/*   Created: 2021/02/18 19:20:25 by sungwopa          #+#    #+#             */
+/*   Updated: 2021/02/23 21:08:14 by sungwopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(char *str)
-{
-	int i;
+#include <unistd.h>
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
+void	ft_print_numbers(void)
+{
+	write(1, "0123456789", 10);
 }

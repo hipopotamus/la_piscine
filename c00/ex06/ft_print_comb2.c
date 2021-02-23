@@ -6,7 +6,7 @@
 /*   By: sungwopa <sungwopa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/20 19:55:31 by sungwopa          #+#    #+#             */
-/*   Updated: 2021/02/23 15:30:50 by sungwopa         ###   ########.fr       */
+/*   Updated: 2021/02/23 21:12:55 by sungwopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,14 +55,14 @@ void	ft_print_comb2(void)
 	char	*set;
 
 	first = 0;
-	set = " ,";
+	set = ", ";
 	while (first <= 98)
 	{
 		sec = first + 1;
 		while (sec <= 99)
 		{
 			convert(first, 2);
-			write(1, &set[0], 1);
+			write(1, &set[1], 1);
 			convert(sec, 2);
 			if (first < 98)
 				write(1, set, 2);

@@ -1,22 +1,25 @@
-int str_len(char *str)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sungwopa <sungwopa@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/02/23 16:38:51 by sungwopa          #+#    #+#             */
+/*   Updated: 2021/02/23 16:47:37 by sungwopa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <unistd.h>
+
+void	ft_putstr(char *stro)
 {
 	int i;
 
 	i = 0;
-	while(str[i] < '\0')
-		i++;
-	return(i+1);
-}
-
-void ft_putstr(char *str)
-{
-	int len;
-	int i;
-
-	len = str_len(str);
-	i = -1;
-	while(++i < str_len)
+	while (str[i] != '\0')
 	{
 		write(1, &str[i], 1);
+		i++;
 	}
 }
