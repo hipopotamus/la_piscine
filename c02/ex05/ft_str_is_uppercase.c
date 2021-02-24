@@ -1,9 +1,21 @@
-int ft_str_is_uppercase(char *str)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sungwopa <sungwopa@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/02/25 02:52:49 by sungwopa          #+#    #+#             */
+/*   Updated: 2021/02/25 02:52:51 by sungwopa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int	ft_str_is_uppercase(char *str)
 {
 	int i;
 
 	i = 0;
-	while(str[i] != '\0')
+	while (str[i] != '\0')
 	{
 		if (str[i] < 'A' || 'Z' < str[i])
 			return (0);

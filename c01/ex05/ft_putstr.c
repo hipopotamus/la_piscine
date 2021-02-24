@@ -6,13 +6,13 @@
 /*   By: sungwopa <sungwopa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/23 16:38:51 by sungwopa          #+#    #+#             */
-/*   Updated: 2021/02/23 16:47:37 by sungwopa         ###   ########.fr       */
+/*   Updated: 2021/02/25 01:18:24 by sungwopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putstr(char *stro)
+void	ft_putstr(char *str)
 {
 	int i;
 

@@ -1,12 +1,24 @@
-int ft_str_is_printable(char *str)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sungwopa <sungwopa@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/02/25 02:53:19 by sungwopa          #+#    #+#             */
+/*   Updated: 2021/02/25 02:53:21 by sungwopa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int	ft_str_is_printable(char *str)
 {
 	int i;
 
 	i = 0;
-	while(str[i] != '\0')
+	while (str[i] != '\0')
 	{
 		if (str[i] < 32 || 126 < str[i])
 			return (0);
 	}
-	return(1);
+	return (1);
 }

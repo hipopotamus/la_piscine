@@ -1,28 +1,27 @@
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sungwopa <sungwopa@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/02/25 02:56:26 by sungwopa          #+#    #+#             */
+/*   Updated: 2021/02/25 02:56:29 by sungwopa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-unsigned int ft_strlcpy(char *dest, char *src, unsigned int size)
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
 	int i;
 
 	i = 0;
-	while(src[i] != '\0' && i < size - 1)
+	while (src[i] != '\0' && i < size - 1)
 	{
 		dest[i] = src[i];
 		i++;
 	}
 	dest[i] = '\0';
-
-	while(src[i] != '\0')
+	while (src[i] != '\0')
 		i++;
-	return(i);
-}
-
-int main()
-{
-	char dest[5];
-	char src[3] = "hed";
-
-	ft_strlcpy(dest, src, 5);
-
-	write(1, dest ,3);
+	return (i);
 }

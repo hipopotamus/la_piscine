@@ -5,73 +5,39 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sungwopa <sungwopa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/23 16:14:47 by sungwopa          #+#    #+#             */
-/*   Updated: 2021/02/23 16:14:52 by sungwopa         ###   ########.fr       */
+/*   Created: 2021/02/25 03:28:44 by sungwopa          #+#    #+#             */
+/*   Updated: 2021/02/25 05:51:19 by sungwopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int		power(int a, int b)
+char	buff[10];
+
+void	print_combn(int n, int i, int j)
+{
+	if (j == 0)
+	{
+		write(1, buff, n);
+		if (buff[0] != '0' + 10-n)
+			write(1, ", ", n);
+	}
+
+	while (n - j + i <= 10 - j && j != 0)
+	{
+		buff[n - j] = '0' + n - j + i;
+		print_combn(n, i, j - 1);
+		i++;
+	}
+}
+
+void	ft_print_combn(n)
 {
 	int i;
-	int temp;
+	int j;
 
-	temp = a;
 	i = 0;
-	while (++i < b)
-		a = a * temp;
-	if (b == 0)
-		return (1);
-	return (a);
-}
+	j = n;
 
-void	convert(int n, int size, char buff[])
-{
-	int i;
-
-	i = -1;
-	while (++i <= size - 1)
-	{
-		if (n / power(10, size - 1 - i) < 1)
-			buff[i] = '0';
-		else
-			buff[i] = '0' + n / power(10, size - 1 - i);
-		n = n % power(10, size - 1 - i);
-	}
-}
-
-int		check(char buff[], int size)
-{
-	int i;
-
-	i = -1;
-	while (++i < size - 1)
-	{
-		if (buff[i] >= buff[i + 1])
-			return (0);
-	}
-	return (1);
-}
-
-void	ft_print_combn(int n)
-{
-	int		i;
-	char	buff[n];
-	char	end;
-
-	end = '0' + 10 - n;
-	i = 0;
-	while (i++ < power(10, n) - 1)
-	{
-		convert(i, n, buff);
-		if (check(buff, n) == 1)
-		{
-			write(1, buff, n);
-			if (buff[0] != end)
-				write(1, ", ", 2);
-			if (buff[0] == end)
-				return ;
-		}
-	}
+	print_combn(n, i, j);
 }
