@@ -6,13 +6,13 @@
 /*   By: sungwopa <sungwopa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/25 02:51:20 by sungwopa          #+#    #+#             */
-/*   Updated: 2021/02/25 02:51:22 by sungwopa         ###   ########.fr       */
+/*   Updated: 2021/02/25 20:09:06 by sungwopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	int i;
+	unsigned int i;
 
 	i = 0;
 	while (i < n && src[i] != '\0')

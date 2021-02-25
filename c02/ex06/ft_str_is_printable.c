@@ -6,7 +6,7 @@
 /*   By: sungwopa <sungwopa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/25 02:53:19 by sungwopa          #+#    #+#             */
-/*   Updated: 2021/02/25 02:53:21 by sungwopa         ###   ########.fr       */
+/*   Updated: 2021/02/25 21:11:33 by sungwopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int	ft_str_is_printable(char *str)
 	{
 		if (str[i] < 32 || 126 < str[i])
 			return (0);
+		i++;
 	}
 	return (1);
 }

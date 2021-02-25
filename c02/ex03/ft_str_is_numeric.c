@@ -6,7 +6,7 @@
 /*   By: sungwopa <sungwopa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/23 21:48:46 by sungwopa          #+#    #+#             */
-/*   Updated: 2021/02/25 01:30:03 by sungwopa         ###   ########.fr       */
+/*   Updated: 2021/02/25 20:51:41 by sungwopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int	ft_str_is_numeric(char *str)
 	{
 		if (str[i] < '0' || '9' < str[i])
 			return (0);
+		i++;
 	}
 	return (1);
 }

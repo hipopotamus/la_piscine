@@ -6,7 +6,7 @@
 /*   By: sungwopa <sungwopa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/25 02:50:56 by sungwopa          #+#    #+#             */
-/*   Updated: 2021/02/25 02:51:01 by sungwopa         ###   ########.fr       */
+/*   Updated: 2021/02/25 20:01:18 by sungwopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ char	*ft_strcpy(char *dest, char *src)
 	int i;
 
 	i = 0;
-	while (src[i] = '\0')
+	while (src[i] != '\0')
 	{
 		dest[i] = src[i];
 		i++;

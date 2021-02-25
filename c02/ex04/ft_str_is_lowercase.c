@@ -6,7 +6,7 @@
 /*   By: sungwopa <sungwopa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/25 02:52:21 by sungwopa          #+#    #+#             */
-/*   Updated: 2021/02/25 02:52:32 by sungwopa         ###   ########.fr       */
+/*   Updated: 2021/02/25 21:10:37 by sungwopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int	ft_str_is_lowercase(char *str)
 	{
 		if (str[i] < 'a' || 'z' < str[i])
 			return (0);
+		i++;
 	}
 	return (1);
 }

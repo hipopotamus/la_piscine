@@ -1,36 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_with_non_printable.c                     :+:      :+:    :+:   */
+/*   ft_print_memory.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sungwopa <sungwopa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/25 02:57:07 by sungwopa          #+#    #+#             */
-/*   Updated: 2021/02/25 02:57:09 by sungwopa         ###   ########.fr       */
+/*   Created: 2021/02/25 12:35:15 by sungwopa          #+#    #+#             */
+/*   Updated: 2021/02/25 12:35:17 by sungwopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	convert_hex_print(char c)
+void	*ft_print_memory(void *addr, unsigned int size)
 {
-	char *set;
-
-	set = "0123456789abcdef";
-	write(1, "\\", 1);
-	write(1, &set[c / 16], 1);
-	write(1, &set[c % 16], 1);
-}
-
-void	ft_putstr_non_printable(char *str)
-{
-	int i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] < 32 || str[i] > 126)
-			convert_hex_print(str[i]);
-		else
-			write(1, &str[i], 1);
-		i++;
-	}
+	write(1, "hellow", 6);
 }

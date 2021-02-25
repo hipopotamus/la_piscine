@@ -1,27 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sungwopa <sungwopa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/25 02:56:26 by sungwopa          #+#    #+#             */
-/*   Updated: 2021/02/25 21:19:23 by sungwopa         ###   ########.fr       */
+/*   Created: 2021/02/25 12:56:52 by sungwopa          #+#    #+#             */
+/*   Updated: 2021/02/25 19:24:56 by sungwopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+int		same(char *str_temp, char *find_temp)
 {
-	unsigned int i;
+	int i;
 
 	i = 0;
-	while (src[i] != '\0' && i < size - 1)
+	while (find_temp[i] != '\0')
 	{
-		dest[i] = src[i];
+		if (str_temp[i] != find_temp[i])
+			return (0);
 		i++;
 	}
-	dest[i] = '\0';
-	while (src[i] != '\0')
+	return (1);
+}
+
+char	*ft_strstr(char *str, char *to_find)
+{
+	int i;
+
+	if (*to_find == '\0')
+		return (str);
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (same(&str[i], to_find))
+			return (&str[i]);
 		i++;
-	return (i);
+	}
+	return (0);
 }
