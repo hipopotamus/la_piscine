@@ -16,8 +16,10 @@ char	*ft_strcat(char *dest, char *src)
 	int size;
 
 	size = 0;
-	while (dest[i] != '\0')
+	while (dest[size] != '\0')
+	{
 		size++;
+	}
 	i = 0;
 	while (src[i] != '\0')
 	{
