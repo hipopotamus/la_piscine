@@ -1,11 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sungwopa <sungwopa@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/09 18:44:00 by sungwopa          #+#    #+#             */
+/*   Updated: 2021/03/09 18:48:32 by sungwopa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	int i;
 
 	i = 0;
-	while(argv[0][i] != '\0' && argc)
+	while (argv[0][i] != '\0' && argc)
 	{
 		write(1, &argv[0][i], 1);
 		i++;

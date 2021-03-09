@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sungwopa <sungwopa@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/09 15:05:25 by sungwopa          #+#    #+#             */
+/*   Updated: 2021/03/09 20:14:15 by sungwopa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
 int		str_len(char *str)
@@ -5,7 +17,7 @@ int		str_len(char *str)
 	int i;
 
 	i = 0;
-	while(str[i] != '\0')
+	while (str[i] != '\0')
 		i++;
 	return (i);
 }
@@ -14,7 +26,7 @@ int		except(char *str)
 {
 	int i;
 	int j;
-	
+
 	if (str_len(str) == 0 || str_len(str) == 1)
 		return (0);
 	i = 0;
@@ -34,7 +46,7 @@ int		except(char *str)
 	return (1);
 }
 
-void	convert(long n, char* str)
+void	convert(long n, char *str)
 {
 	int size;
 
@@ -46,9 +58,11 @@ void	convert(long n, char* str)
 }
 
 void	ft_putnbr_base(int nbr, char *base)
-{	
+{
 	long nbr_long;
 
+	if (except(base) == 0)
+		return ;
 	nbr_long = nbr;
 	if (nbr == 0)
 	{
@@ -60,7 +74,5 @@ void	ft_putnbr_base(int nbr, char *base)
 		nbr_long = -nbr_long;
 		write(1, "-", 1);
 	}
-	if (except(base) == 0)
-		return ;
 	convert(nbr_long, base);
 }

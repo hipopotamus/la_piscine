@@ -4,6 +4,6 @@ int ft_atoi_base(char *str, char *base);
 
 int main()
 {
-	char s1[80] ="	+++-101";
-	printf("%d\n", ft_atoi_base(s1, "01"));
+	char s1[80] = "   +--23aawdas33";
+	printf("%d\n", ft_atoi_base(s1, "0123456789ABCDEF"));
 }

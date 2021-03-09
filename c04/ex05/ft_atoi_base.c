@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi_base.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sungwopa <sungwopa@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/09 17:08:52 by sungwopa          #+#    #+#             */
+/*   Updated: 2021/03/09 19:48:57 by sungwopa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
 int		check_space(char c)
@@ -13,7 +25,7 @@ int		except(char *str)
 {
 	int i;
 	int j;
-	
+
 	i = 0;
 	while (str[i] != '\0')
 	{
@@ -35,7 +47,7 @@ int		except(char *str)
 	return (i);
 }
 
-int check(char c, char* base)
+int		check(char c, char *base)
 {
 	int i;
 
@@ -59,7 +71,7 @@ int		ft_atoi(char *str, char *base, int len)
 	plus_minus = 1;
 	res = 0;
 	i = 0;
-	while(check_space(str[i]) != '\0')
+	while (check_space(str[i]) != '\0')
 		i++;
 	while (str[i] == '+' || str[i] == '-')
 	{
@@ -70,7 +82,7 @@ int		ft_atoi(char *str, char *base, int len)
 	while (1)
 	{
 		if ((sub = check(str[i], base)) == -1)
-			break;
+			break ;
 		res *= len;
 		res += sub;
 		i++;
@@ -83,10 +95,9 @@ int		ft_atoi_base(char *str, char *base)
 	int len;
 	int res;
 
-	len  = except(base);
+	len = except(base);
 	if (len == 0)
 		return (0);
 	res = ft_atoi(str, base, len);
 	return (res);
-
 }
