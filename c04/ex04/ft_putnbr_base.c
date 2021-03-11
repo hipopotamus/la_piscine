@@ -6,7 +6,7 @@
 /*   By: sungwopa <sungwopa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 15:05:25 by sungwopa          #+#    #+#             */
-/*   Updated: 2021/03/09 20:14:15 by sungwopa         ###   ########.fr       */
+/*   Updated: 2021/03/11 21:27:26 by sungwopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void	ft_putnbr_base(int nbr, char *base)
 	nbr_long = nbr;
 	if (nbr == 0)
 	{
-		write(1, "0", 1);
+		write(1, &base[0], 1);
 		return ;
 	}
 	if (nbr < 0)

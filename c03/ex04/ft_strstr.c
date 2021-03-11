@@ -6,9 +6,11 @@
 /*   By: sungwopa <sungwopa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/25 12:56:52 by sungwopa          #+#    #+#             */
-/*   Updated: 2021/03/07 15:39:02 by sungwopa         ###   ########.fr       */
+/*   Updated: 2021/03/11 13:32:00 by sungwopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
 
 int		same(char *str_temp, char *find_temp)
 {
@@ -38,4 +40,9 @@ char	*ft_strstr(char *str, char *to_find)
 		i++;
 	}
 	return (0);
+}
+
+int main()
+{
+	printf("%s", ft_strstr("hellow", ""));
 }

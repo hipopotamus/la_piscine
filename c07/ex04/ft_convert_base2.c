@@ -1,4 +1,16 @@
-int	check_space(char c)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_convert_base2.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sungwopa <sungwopa@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/10 18:01:40 by sungwopa          #+#    #+#             */
+/*   Updated: 2021/03/11 22:00:09 by sungwopa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int		check_space(char c)
 {
 	if (c == '\t' || c == '\v' || c == '\f')
 		return (1);
@@ -7,7 +19,7 @@ int	check_space(char c)
 	return (0);
 }
 
-int check_base(char *base)
+int		check_base(char *base)
 {
 	int i;
 	int j;
@@ -33,7 +45,7 @@ int check_base(char *base)
 	return (i);
 }
 
-int check_in_base(char c, char* base)
+int		check_in_base(char c, char *base)
 {
 	int i;
 
@@ -41,18 +53,18 @@ int check_in_base(char c, char* base)
 	while (base[i] != '\0')
 	{
 		if (c == base[i])
-			return(i);
+			return (i);
 		i++;
 	}
 	return (-1);
 }
 
-long long ft_atoi_base(char *str, char *base, int len)
+int	ft_atoi_base(char *str, char *base, int len)
 {
-	int i;
-	int plus_minus;
-	long long res;
-	int sub;
+	int		i;
+	int		plus_minus;
+	int	res;
+	int		sub;
 
 	plus_minus = 1;
 	i = 0;
@@ -68,7 +80,7 @@ long long ft_atoi_base(char *str, char *base, int len)
 	while (1)
 	{
 		if ((sub = check_in_base(str[i], base)) == -1)
-			break;
+			break ;
 		res *= len;
 		res += sub;
 		i++;

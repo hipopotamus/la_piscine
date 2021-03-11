@@ -6,11 +6,13 @@
 /*   By: sungwopa <sungwopa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 18:24:52 by sungwopa          #+#    #+#             */
-/*   Updated: 2021/03/09 18:39:48 by sungwopa         ###   ########.fr       */
+/*   Updated: 2021/03/11 01:35:27 by sungwopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+
+int g_cnt;
 
 void	print_res(int *position)
 {
@@ -59,20 +61,22 @@ int		check_brunch(int *position, int row)
 		if (check_position(position, row) == 1)
 		{
 			if (row == 9)
+			{
+				g_cnt++;
 				print_res(position);
-			if (row < 9)
+			}
+			else if (row < 9)
 				check_brunch(position, row + 1);
 		}
 		col++;
 	}
-	return (0);
+	return (g_cnt);
 }
 
 int		ft_ten_queens_puzzle(void)
 {
 	int position[10];
-	int row;
 
-	row = 0;
-	return (check_brunch(position, row));
+	g_cnt = 0;
+	return (check_brunch(position, 0));
 }

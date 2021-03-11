@@ -6,15 +6,17 @@
 /*   By: sungwopa <sungwopa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 17:45:25 by sungwopa          #+#    #+#             */
-/*   Updated: 2021/03/09 17:49:27 by sungwopa         ###   ########.fr       */
+/*   Updated: 2021/03/11 02:03:22 by sungwopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_sqrt(int nb)
 {
-	int i;
+	long i;
 
-	i = 0;
+	if (nb <= 0)
+		return (0);
+	i = 1;
 	while (i * i <= nb)
 	{
 		if (i * i == nb)

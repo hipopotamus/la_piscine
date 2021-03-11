@@ -6,18 +6,18 @@
 /*   By: sungwopa <sungwopa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 17:54:45 by sungwopa          #+#    #+#             */
-/*   Updated: 2021/03/09 17:56:47 by sungwopa         ###   ########.fr       */
+/*   Updated: 2021/03/11 15:41:27 by sungwopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	check_prime(int nb)
 {
-	int i;
+	long i;
 
 	if (nb < 2)
 		return (0);
 	i = 2;
-	while (i * i < nb)
+	while (i * i <= nb)
 	{
 		if (nb % i == 0)
 			return (0);

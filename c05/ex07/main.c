@@ -4,5 +4,5 @@ int ft_find_next_prime(int nb);
 
 int main()
 {
-	printf("%d\n", ft_find_next_prime(50));
+	printf("%d\n", ft_find_next_prime(200000000));
 }

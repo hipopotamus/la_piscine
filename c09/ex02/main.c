@@ -7,7 +7,7 @@ int main()
 	int i;
 
 	i = 0;
-	char **s = ft_split("&&cde&&", "&!");
+	char **s = ft_split("abd,cda,adf afds", " ,+");
 	while(s[i] != '\0')
 	{
 		printf("%s\n", s[i]);

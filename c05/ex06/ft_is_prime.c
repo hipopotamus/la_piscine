@@ -6,18 +6,18 @@
 /*   By: sungwopa <sungwopa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 17:49:39 by sungwopa          #+#    #+#             */
-/*   Updated: 2021/03/09 17:54:27 by sungwopa         ###   ########.fr       */
+/*   Updated: 2021/03/11 01:50:50 by sungwopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_is_prime(int nb)
 {
-	int i;
+	long i;
 
 	if (nb < 2)
 		return (0);
 	i = 2;
-	while (i * i < nb)
+	while (i * i <= nb)
 	{
 		if (nb % i == 0)
 			return (0);

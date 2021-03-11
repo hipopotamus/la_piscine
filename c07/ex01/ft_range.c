@@ -6,7 +6,7 @@
 /*   By: sungwopa <sungwopa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 21:14:24 by sungwopa          #+#    #+#             */
-/*   Updated: 2021/03/09 21:22:16 by sungwopa         ###   ########.fr       */
+/*   Updated: 2021/03/10 16:04:38 by sungwopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	*ft_range(int min, int max)
 	int *range;
 
 	if (min >= max)
-		return (0);
+		return (NULL);
 	size = (max - min);
 	range = (int*)malloc(sizeof(int) * size);
 	i = 0;

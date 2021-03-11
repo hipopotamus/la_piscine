@@ -6,11 +6,16 @@ int ft_ultimate_range(int **range, int min, int max);
 int main()
 {
 	int **s1 = malloc(sizeof(int*) * 1);
-	s1[0] = malloc(sizeof(int) * 4);
+	int min = 4;
+	int max = 3;
+	//s1[0] = malloc(sizeof(int) * (max - min));
 
-	printf("%d\n", ft_ultimate_range(s1, -1, 3));
+	//ft_ultimate_range(s1, min, max);
+	//printf("%p\n", s1[0]);
+
+	printf("%d\n", ft_ultimate_range(s1, min, max));
 	int i = 0;
-	while(i < 4)
+	while(i < (max - min))
 	{
 		printf("%d\n", s1[0][i]);
 		i++;
