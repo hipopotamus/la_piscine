@@ -6,7 +6,7 @@
 /*   By: sungwopa <sungwopa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/10 18:01:40 by sungwopa          #+#    #+#             */
-/*   Updated: 2021/03/11 22:00:09 by sungwopa         ###   ########.fr       */
+/*   Updated: 2021/03/15 15:30:15 by sungwopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ int	ft_atoi_base(char *str, char *base, int len)
 {
 	int		i;
 	int		plus_minus;
-	int	res;
+	int		res;
 	int		sub;
 
 	plus_minus = 1;

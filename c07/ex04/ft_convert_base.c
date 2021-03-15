@@ -6,7 +6,7 @@
 /*   By: sungwopa <sungwopa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/10 13:28:56 by sungwopa          #+#    #+#             */
-/*   Updated: 2021/03/11 21:59:14 by sungwopa         ###   ########.fr       */
+/*   Updated: 2021/03/15 23:18:40 by sungwopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,20 +43,23 @@ int		len_int_base(int num, char *base)
 	return (j - 1);
 }
 
+#include <stdio.h>
 void	convert(int num, char *base, char *dest, int i_len)
 {
 	int len;
+	long temp;
 
+	temp = num;
 	len = len_str(base);
-	if (num == 0)
+	if (temp == 0)
 		return ;
-	if (num < 0)
+	if (temp < 0)
 	{
-		num = -num;
+		temp = -temp;
 		dest[0] = '-';
 	}
-	convert(num / len, base, dest, i_len - 1);
-	dest[i_len] = base[num % len];
+	convert(temp / len, base, dest, i_len - 1);
+	dest[i_len] = base[temp % len];
 }
 
 char	*ft_convert_base(char *nbr, char *base_from, char *base_to)
@@ -72,12 +75,14 @@ char	*ft_convert_base(char *nbr, char *base_from, char *base_to)
 	num = ft_atoi_base(nbr, base_from, base_len);
 	if (num == 0)
 	{
-		ptr = malloc(sizeof(char) * 1);
+		ptr = malloc(sizeof(char) * 2);
 		ptr[0] = base_to[0];
+		ptr[1] = '\0';
 		return (ptr);
 	}
 	int_len = len_int_base(num, base_to);
-	ptr = malloc(sizeof(char) * int_len);
+	ptr = malloc(sizeof(char) * (int_len + 1));
 	convert(num, base_to, ptr, int_len);
+	ptr[int_len + 1] = '\0';
 	return (ptr);
 }
