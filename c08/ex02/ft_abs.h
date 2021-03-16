@@ -1,5 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_abs.h                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sungwopa <sungwopa@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/16 12:44:20 by sungwopa          #+#    #+#             */
+/*   Updated: 2021/03/16 12:44:22 by sungwopa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FT_ABS_H
-#define FT_ABS_H
-#define ABS(value) value < 0 ? -value : value
+# define FT_ABS_H
+
+# define ABS(value) value < 0 ? ((-1) * value) : value
 
 #endif

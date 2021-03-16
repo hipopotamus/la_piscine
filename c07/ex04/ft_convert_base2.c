@@ -6,7 +6,7 @@
 /*   By: sungwopa <sungwopa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/10 18:01:40 by sungwopa          #+#    #+#             */
-/*   Updated: 2021/03/15 15:30:15 by sungwopa         ###   ########.fr       */
+/*   Updated: 2021/03/16 12:31:45 by sungwopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int		check_in_base(char c, char *base)
 	return (-1);
 }
 
-int	ft_atoi_base(char *str, char *base, int len)
+int		ft_atoi_base(char *str, char *base, int len)
 {
 	int		i;
 	int		plus_minus;

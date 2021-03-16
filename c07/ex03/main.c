@@ -17,7 +17,7 @@ int main()
 		i++;
 	}
 	s1[0] = "dd";
-	s1[1] = "boyd";
+	s1[1] = "";
 	s1[2] = "@!hdsfa";
 	s1[3] = "adsf2132";
 	s1[4] = "hello";

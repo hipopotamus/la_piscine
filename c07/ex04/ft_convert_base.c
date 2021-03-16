@@ -6,14 +6,14 @@
 /*   By: sungwopa <sungwopa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/10 13:28:56 by sungwopa          #+#    #+#             */
-/*   Updated: 2021/03/15 23:18:40 by sungwopa         ###   ########.fr       */
+/*   Updated: 2021/03/16 12:31:23 by sungwopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <unistd.h>
 
-int	ft_atoi_base(char *str, char *base, int len);
+int		ft_atoi_base(char *str, char *base, int len);
 int		check_base(char *base);
 
 int		len_str(char *str)
@@ -43,11 +43,10 @@ int		len_int_base(int num, char *base)
 	return (j - 1);
 }
 
-#include <stdio.h>
 void	convert(int num, char *base, char *dest, int i_len)
 {
-	int len;
-	long temp;
+	int		len;
+	long	temp;
 
 	temp = num;
 	len = len_str(base);
@@ -66,7 +65,7 @@ char	*ft_convert_base(char *nbr, char *base_from, char *base_to)
 {
 	int		base_len;
 	char	*ptr;
-	int	num;
+	int		num;
 	int		int_len;
 
 	if (check_base(base_from) == 0 || check_base(base_to) == 0)

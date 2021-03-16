@@ -6,7 +6,7 @@
 /*   By: sungwopa <sungwopa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 21:22:48 by sungwopa          #+#    #+#             */
-/*   Updated: 2021/03/10 16:16:32 by sungwopa         ###   ########.fr       */
+/*   Updated: 2021/03/16 17:38:26 by sungwopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_ultimate_range(int **range, int min, int max)
 	len = (max - min);
 	if (len <= 0)
 	{
-		range[0] = NULL;
+		range[0] = 0;
 		return (0);
 	}
 	ptr = (int*)malloc(sizeof(int) * len);

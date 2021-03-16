@@ -1,41 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   util2.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sungwopa <sungwopa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jeyoon <jeyoon@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/09 20:30:42 by sungwopa          #+#    #+#             */
-/*   Updated: 2021/03/16 12:27:39 by sungwopa         ###   ########.fr       */
+/*   Created: 2021/03/14 20:24:01 by jeyoon            #+#    #+#             */
+/*   Updated: 2021/03/14 23:04:35 by jeyoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "rush.h"
 
-int		len_str(char *str)
+int		check_zero(char *number)
 {
 	int i;
 
 	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-
-char	*ft_strdup(char *src)
-{
-	char	*dest;
-	int		i;
-
-	dest = (char*)malloc(sizeof(char) * (len_str(src) + 1));
-	if (dest == 0)
-		return (0);
-	i = 0;
-	while (i < len_str(src))
+	while (number[i] != '\0')
 	{
-		dest[i] = src[i];
+		if (number[i] != '0')
+			return (0);
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (1);
+}
+
+void	print_zero(t_key_value **dict_arr)
+{
+	int i;
+
+	i = 0;
+	while (dict_arr[i]->key)
+	{
+		if (find_key('0', dict_arr[i]->key))
+			ft_putstr(dict_arr[i]->value);
+		i++;
+	}
 }

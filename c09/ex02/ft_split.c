@@ -6,13 +6,13 @@
 /*   By: sungwopa <sungwopa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/11 16:45:41 by sungwopa          #+#    #+#             */
-/*   Updated: 2021/03/15 23:21:41 by sungwopa         ###   ########.fr       */
+/*   Updated: 2021/03/16 13:04:57 by sungwopa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int		check_sep(char c, char* charset)
+int		check_sep(char c, char *charset)
 {
 	int i;
 
@@ -40,7 +40,7 @@ int		len_words(char *str, char *charset)
 {
 	int i;
 	int cnt;
-	
+
 	i = 0;
 	cnt = 0;
 	while (str[i] != '\0')

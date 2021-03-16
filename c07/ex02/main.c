@@ -6,7 +6,7 @@ int ft_ultimate_range(int **range, int min, int max);
 int main()
 {
 	int **s1 = malloc(sizeof(int*) * 1);
-	int min = 4;
+	int min = -1;
 	int max = 3;
 	//s1[0] = malloc(sizeof(int) * (max - min));
 
